@@ -31,9 +31,9 @@ int main(int argc, char const *argv[])
     cin >> key;
 
     if (search(arr, size, key))
-        cout << "True" << endl;
+        cout << "Key is present" << endl;
     else
-        cout << "false" << endl;
+        cout << "Key is absent" << endl;
 
     return 0;
 }
