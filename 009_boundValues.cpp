@@ -86,7 +86,7 @@ int main(int argc, char const *argv[])
     cout << "Enter the key: ";
     cin >> key;
     cout << endl;
-
+ 
     sort(arr, arr + n);
 
     outputArray(arr, n);
