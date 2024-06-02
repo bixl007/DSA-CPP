@@ -1,5 +1,16 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
+
+void outputArray(int arr[], int size)
+{
+    cout << "The elements are: " << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
 
 int binSearch(int arr[], int size, int key)
 {
@@ -47,6 +58,8 @@ int main(int argc, char const *argv[])
     cin >> key;
     cout << endl;
 
+    sort(arr, arr + n);
+    outputArray(arr, n);
     cout << "The number was found at: " << binSearch(arr, n, key) + 1 << " position" << endl;
 
     return 0;
