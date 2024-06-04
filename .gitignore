@@ -1,5 +1,5 @@
-001_arrayBasics
 .vscode
+001_arrayBasics
 002_maxMin
 003_sumArray
 004_linearSearch
@@ -11,3 +11,4 @@
 010_pivotElement
 011_sqrtBinSearch
 012_selectionSort
+013_bubbleSort
