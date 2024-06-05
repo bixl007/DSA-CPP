@@ -21,7 +21,7 @@ void reverseArray(int arr[], int size)
 
 int main(int argc, char const *argv[])
 {
-    int size, key;
+    int size;
     cout << "Enter the size: ";
     cin >> size;
     cout << endl;
