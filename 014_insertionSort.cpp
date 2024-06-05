@@ -46,7 +46,7 @@ void outputArray(int arr[], int size)
     }
     cout << endl;
 }
-
+ 
 int main()
 {
     int n;
