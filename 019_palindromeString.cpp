@@ -1,13 +1,25 @@
 #include <iostream>
 using namespace std;
 
+
+char toLower(char ch){
+    if(ch>='a' && ch <='z'){
+        return ch;
+    }
+    else{
+        ch = ch - 'A' + 'a';
+    }
+    return ch;
+}
+
+
 int palindromeString(char str[], int n)
 {
     int i = 0;
     int j = n - 1;
     while (i <= j)
     {
-        if (str[i] != str[j])
+        if (toLower(str[i]) != toLower(str[j]))
         {
             return 0;
         }
@@ -18,16 +30,6 @@ int palindromeString(char str[], int n)
         }
     }
     return 1;
-}
-
-char toLower(char ch){
-    if(ch>='a' && ch <='z'){
-        return ch;
-    }
-    else{
-        ch = ch - 'A' + 'a';
-    }
-    return ch;
 }
 
 int countLength(string str)
