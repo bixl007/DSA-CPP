@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-char toLower(char ch)
+char toUpper(char ch)
 {
     if (ch >= 'A' && ch <= 'Z')
     {
@@ -16,5 +16,5 @@ char toLower(char ch)
 
 int main()
 {
-    cout << toLower('z') << endl;
+    cout << toUpper('z') << endl;
 }
