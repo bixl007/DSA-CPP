@@ -18,5 +18,6 @@
 017_stringLength
 018_reverseString
 019_palindromeString
-20_lowerCharacter
-21_upperCharacter
+020_lowerCharacter
+021_upperCharacter
+022_charMaxOccurence
