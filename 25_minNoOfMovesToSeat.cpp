@@ -1,7 +1,6 @@
 // This code represent my solution for the leetcode question of 2037. Minimum Number of Moves to Seat Everyone
 
-
-
+/*
 class Solution {
 
 public:
@@ -25,3 +24,6 @@ public:
     }
 
 };
+
+*/
+

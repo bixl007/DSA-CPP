@@ -1,5 +1,7 @@
 // This code represent my solution for the leetcode question of String Compression(443)
 
+
+/*
 class Solution {
 public:
     int compress(vector<char>& chars) {
@@ -27,3 +29,5 @@ public:
         return s.length();
     }
 };
+*/
+

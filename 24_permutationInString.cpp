@@ -1,5 +1,8 @@
 // This code represent my solution for the leetcode question of 567. Permutation in String
 
+
+/*
+
 class Solution
 {
 public:
@@ -44,3 +47,4 @@ public:
         return false;
     }
 };
+*/

@@ -1,5 +1,9 @@
 // This code represent my solution for the leetcode question of 945. Minimum Increment to Make Array Unique
 
+
+
+/*
+
 class Solution {
 
 public:
@@ -34,3 +38,8 @@ public:
         return count;
     }
 };
+
+
+*/
+
+
