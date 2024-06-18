@@ -11,7 +11,7 @@ public:
 
         sort(nums.begin(), nums.end());
 
-        int count = 0;
+        int count = 0; 
 
         for (int i = 1; i < nums.size(); i++) {
 
