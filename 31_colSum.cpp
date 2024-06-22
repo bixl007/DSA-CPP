@@ -14,7 +14,7 @@ void colSum(int arr[][2], int n, int m)
         cout << s << endl;
     }
 }
-
+ 
 int main()
 {
     int arr[2][2] = {{4, 8}, {8, 6}};
