@@ -1,5 +1,5 @@
 // leetcode 204. Count Primes
-
+//Sieve of Eratosthenes algorithm
 #include <iostream>
 #include <vector>
 #include <algorithm>
