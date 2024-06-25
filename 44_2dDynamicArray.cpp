@@ -33,4 +33,12 @@ int main()
         }
         cout << endl;
     }
+
+    // releasing memory
+
+    for (int i = 0; i < rows; i++)
+    {
+        delete[] arr[i];
+    }
+    delete[] arr;
 }
