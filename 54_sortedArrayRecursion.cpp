@@ -12,6 +12,7 @@ bool isSorted(int arr[], int size)
     return isSorted(arr + 1, size - 1);
 }
 
+
 int main()
 {
     int arr[] = {1, 2, 5, 6, 7, 8, 9};
