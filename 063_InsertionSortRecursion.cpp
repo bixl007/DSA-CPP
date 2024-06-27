@@ -18,7 +18,7 @@ void insertionSort(int arr[], int start, int size)
     }
     arr[i + 1] = temp;
 
-    insertionSort(arr, start + , size);
+    insertionSort(arr, start + 1, size);
 }
 
 int main()
