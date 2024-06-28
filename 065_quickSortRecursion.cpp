@@ -8,7 +8,7 @@ int partition(int arr[], int s, int e)
 
     int count = 0;
 
-    for (int i = s + 1; i < e; i++)
+    for (int i = s + 1; i <= e; i++)
     {
         if (arr[i] < pivot)
             count++;
