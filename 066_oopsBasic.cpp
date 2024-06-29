@@ -8,6 +8,7 @@ private:
 
 public:
     string name;
+    static int timeToComplete;
 
     int getHealth()
     {
@@ -19,12 +20,15 @@ public:
     }
 };
 
+int Hero::timeToComplete = 5;
+
 int main()
 {
     Hero ramesh;
     ramesh.name = "Ramesh";
     ramesh.setHealth(100);
 
+    cout << "Time to complete is: " << Hero::timeToComplete << endl;
     cout << "Name of the Hero: " << ramesh.name << endl;
     cout << "Current Health of the Hero is: " << ramesh.getHealth() << endl;
 }
