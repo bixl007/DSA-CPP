@@ -3,6 +3,8 @@
 #include <iostream>
 using namespace std;
 
+//                                                               Static Polymorphism
+
 //                                 Function overloading
 /*
 class A
@@ -68,3 +70,37 @@ int main()
     obj1 + obj2;
 }
 */
+
+//                                                                Dynamic Polymorphism
+
+// Method overriding
+
+class Animal
+{
+public:
+    void speak()
+    {
+        cout << "Speaking" << endl;
+    }
+};
+
+class Dog : public Animal
+{
+public:
+    void speak()
+    {
+        cout << "Barking" << endl;
+    }
+};
+
+int main()
+{
+
+    Animal ob;
+    ob.speak();
+
+    Dog obj;
+    obj.speak();
+
+    return 0;
+}
