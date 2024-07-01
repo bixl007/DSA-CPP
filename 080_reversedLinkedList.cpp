@@ -33,8 +33,24 @@
 //     curr -> next = prev;
 // }
 
+// LinkedListNode<int> *reverse1(LinkedListNode<int> *&head) {
+//     if(head == NULL || head -> next == NULL) {
+//         return head;
+//     }
+
+//     LinkedListNode<int> *smallHead =  reverse1(head -> next);
+
+//     head -> next -> next = head;
+//     head -> next = NULL;
+
+//     return smallHead;
+// }
+
+
 // LinkedListNode<int> *reverseLinkedList(LinkedListNode<int> *head)
 // {
+
+//     return reverse1(head);
 
 //     LinkedListNode<int> *curr = head;
 //     LinkedListNode<int> *prev = NULL;
