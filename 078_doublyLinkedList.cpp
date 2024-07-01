@@ -45,7 +45,8 @@ int getLength(Node *&head)
 }
 
 // Insert to head
-void insertAtHead(Node *&head, int d) {
+void insertAtHead(Node *&head, int d)
+{
     Node *temp = new Node(d);
     temp->next = head;
     head->prev = temp;
@@ -53,11 +54,46 @@ void insertAtHead(Node *&head, int d) {
 }
 
 // Insert to tail
-void insertAtTail(Node *&tail, int d) {
+void insertAtTail(Node *&tail, int d)
+{
     Node *temp = new Node(d);
     temp->prev = tail;
     tail->next = temp;
     tail = temp;
+}
+
+// Insert at a position
+void insertAtPosition(Node *&tail, Node *&head, int position, int d)
+{
+    if (position == 1)
+    {
+        insertAtHead(head, d);
+        return;
+    }
+
+    Node *temp = head;
+    int cnt = 1;
+
+    while (cnt < position - 1)
+    {
+        temp = temp->next;
+        cnt++;
+    }
+
+    // Inserting at last position
+    if (temp->next == NULL)
+    {
+        insertAtTail(tail, d);
+        return;
+    }
+
+    // Creating a node for d
+    Node *nodeToInsert = new Node(d);
+
+    nodeToInsert->next = temp->next;
+    temp->next->prev = nodeToInsert;
+    temp->next = nodeToInsert;
+    nodeToInsert->prev = temp;
 }
 
 int main()
@@ -84,6 +120,10 @@ int main()
     insertAtTail(tail, 62);
     insertAtTail(tail, 47);
     insertAtTail(tail, 56);
+    print(head);
+    cout << "Length of the Linked list is: " << getLength(head) << endl;
+
+    insertAtPosition(tail, head, 4, 65);
     print(head);
     cout << "Length of the Linked list is: " << getLength(head) << endl;
 
