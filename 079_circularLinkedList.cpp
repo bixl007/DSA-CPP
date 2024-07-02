@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+#include <map>
 
 class Node
 {
@@ -128,6 +129,49 @@ bool isCircular(Node *head) // in parameter we can give any name
     return false;
 }
 
+bool detectLoop(Node *head)
+{
+    if (head == NULL)
+        return false;
+
+    map<Node *, bool> visited;
+    Node *temp = head;
+    while (temp != NULL)
+    {
+        if (visited[temp] == true)
+            return true;
+
+        visited[temp] = true;
+        temp = temp->next;
+    }
+    return false;
+}
+
+Node *floydDetectionLoop(Node *head)
+{
+    if (head == NULL)
+        return NULL;
+
+    Node *slow = head;
+    Node *fast = head;
+
+    while (slow != NULL & fast != NULL)
+    {
+        fast = fast->next;
+        if (fast != NULL)
+            fast = fast->next;
+
+        slow = slow->next;
+
+        if (slow == fast)
+        {
+            cout << "Present at " << slow->data << endl;
+            return slow;
+        }
+    }
+    return NULL;
+}
+
 int main()
 {
     Node *tail = NULL;
@@ -158,4 +202,19 @@ int main()
 
     if (isCircular(tail))
         cout << "It is a circular list" << endl;
+
+    if (detectLoop(tail))
+        cout << "Loop is present!!" << endl;
+
+    if (detectLoop(tail))
+        cout << "Loop is present!!" << endl;
+
+    if (floydDetectionLoop(tail) != NULL)
+    {
+        cout << "Loop is present!!" << endl;
+    }
+    else
+    {
+        cout << "No cycle is preset" << endl;
+    }
 }
