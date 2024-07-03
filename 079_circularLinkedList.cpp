@@ -172,6 +172,22 @@ Node *floydDetectionLoop(Node *head)
     return NULL;
 }
 
+Node *getStartingNode(Node *head)
+{
+    if (head == NULL)
+        return NULL;
+
+    Node *intersection = floydDetectionLoop(head);
+    Node *slow = head;
+
+    while (slow != intersection)
+    {
+        slow = slow->next;
+        intersection = intersection->next;
+    }
+    return slow;
+}
+
 int main()
 {
     Node *tail = NULL;
@@ -217,4 +233,7 @@ int main()
     {
         cout << "No cycle is preset" << endl;
     }
+
+    Node *startingNode = getStartingNode(tail);
+    cout << "Loop starts at " << startingNode->data << endl;
 }
