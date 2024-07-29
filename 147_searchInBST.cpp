@@ -32,3 +32,26 @@ bool searchInBST(BinaryTreeNode<int> *root, int x)
         return searchInBST(root->right, x);
     }
 }
+
+bool searchInBSTIterative(BinaryTreeNode<int> *root, int x)
+{
+    BinaryTreeNode<int> *temp = root;
+
+    while (root != NULL)
+    {
+        if (root->data == x)
+        {
+            return true;
+        }
+        if (root->data > x)
+        {
+            temp = temp->left;
+        }
+        else
+        {
+            temp = temp->right;
+        }
+    }
+
+    return false;
+}
