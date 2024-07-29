@@ -37,13 +37,13 @@ bool searchInBSTIterative(BinaryTreeNode<int> *root, int x)
 {
     BinaryTreeNode<int> *temp = root;
 
-    while (root != NULL)
+    while (temp != NULL)
     {
-        if (root->data == x)
+        if (temp->data == x)
         {
             return true;
         }
-        if (root->data > x)
+        if (temp->data > x)
         {
             temp = temp->left;
         }
