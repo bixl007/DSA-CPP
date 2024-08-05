@@ -1,4 +1,4 @@
-//              Coding ninja k reverse list 
+
 
 /**
  * Definition for singly-linked list.
