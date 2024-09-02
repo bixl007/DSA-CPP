@@ -2,7 +2,6 @@
 
 Welcome to my DSA-C++ repository! This repository contains various DSA algorithms, projects, code snippets, and resources. Whether you're a beginner or an experienced developer, I hope you find something useful here.
 
-
 ## Getting Started
 
 To get a copy of this repository up and running on your local machine, follow these steps:
