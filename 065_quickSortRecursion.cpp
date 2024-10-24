@@ -3,38 +3,34 @@ using namespace std;
 
 int partition(int arr[], int s, int e)
 {
+    int pivot = arr[s]; // Pivot is the first element
+    int i = s + 1;      // Start from the element next to pivot
+    int j = e;          // Start from the last element
 
-    int pivot = arr[s];
-
-    int count = 0;
-
-    for (int i = s + 1; i <= e; i++)
+    while (i <= j)
     {
-        if (arr[i] < pivot)
-            count++;
-    }
-
-    int pivotIndex = count + s;
-
-    swap(arr[s], arr[pivotIndex]);
-
-    int i = s, j = e;
-
-    while (i < pivotIndex && j > pivotIndex)
-    {
-        while (arr[i] <= pivot)
+        // Increment i until we find an element greater than the pivot
+        while (i <= e && arr[i] <= pivot)
         {
             i++;
         }
-        while (arr[j] >= pivot)
+
+        // Decrement j until we find an element smaller than the pivot
+        while (j >= s && arr[j] > pivot)
         {
             j--;
         }
 
-        if (i < pivotIndex && j > pivotIndex)
-            swap(arr[i++], arr[j--]);
+        // Swap the elements at i and j if i is still less than j
+        if (i < j)
+        {
+            swap(arr[i], arr[j]);
+        }
     }
-    return pivotIndex;
+
+    // Place the pivot in its correct position
+    swap(arr[s], arr[j]);
+    return j; // Return the index of the pivot
 }
 
 void quickSort(int arr[], int s, int e)
