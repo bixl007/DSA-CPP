@@ -27,7 +27,7 @@ int minimumCoins(int n, vector<int> days, vector<int> cost)
 
 // Memorization
 int solve(int n, vector<int> days, vector<int> cost, int index, vector<int> &dp)
-{
+{ 
     if (index >= n)
         return 0;
 
