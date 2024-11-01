@@ -53,3 +53,22 @@ int findWays(vector<int> &num, int tar)
     vector<int> dp(tar + 1, -1);
     return solve(num, tar, dp);
 }
+
+// Tabulation
+int findWays(vector<int> &num, int tar)
+{
+    vector<int> dp(tar + 1, 0);
+
+    dp[0] = 1;
+
+    for (int i = 1; i <= tar; i++)
+    {
+        for (int j = 0; j < num.size(); j++)
+        {
+            if (i - num[j] >= 0)
+                dp[i] += dp[i - num[j]];
+        }
+    }
+
+    return dp[tar];
+}
