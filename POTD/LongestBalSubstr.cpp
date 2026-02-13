@@ -6,7 +6,7 @@ class Solution
 public:
     int longestBalanced(string s)
     {
-        int n = s.size();
+        int n = s.length();
         int cnt = 1;
 
         vector<int> freq(26, 0);
@@ -17,12 +17,14 @@ public:
             int unique = 0, maxF = 0, cntMax = 0;
             for (int r = l; r < n; r++)
             {
-                int curr = ++freq['a' - s[r]];
+                int curr = ++freq[s[r] - 'a'];
                 if (curr == 1)
                     unique++;
 
-                if (curr > maxF)
+                if (curr > maxF) {
                     maxF = curr;
+                    cntMax = 1;
+                }
                 else if (curr == maxF)
                 {
                     cntMax++;
